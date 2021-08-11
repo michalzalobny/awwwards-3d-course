@@ -5,5 +5,9 @@ block variables
 
 block body
   .about
-    .about__content
-      | Lorem ipsum dolor sit amet.
+    .about__wrapper
+      section.about__gallery
+        .about__gallery__wrapper
+          each media in about.data.gallery
+            figure.about__gallery_media 
+              img.about__gallery_media__image(alt=media.image.alt, src=media.image.url)
